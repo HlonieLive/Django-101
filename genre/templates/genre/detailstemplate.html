@@ -6,7 +6,8 @@
     <title>Details Template</title>
 </head>
 <body>
-    {% for pieceobj in Pitem %}
+{% block content %}    
+    {% for pieceobj in collection.piece_set.all %}
     <div align="center">
         <img src="{{ pieceobj.piececover }}" height="200" width="200" alt="Piece Cover">
         <h2>{{ pieceobj.title }} - {{pieceobj.artist}}</h2>
@@ -15,5 +16,6 @@
         <br/>
     </div>
     {% endfor %}
+{% endblock %}    
 </body>
 </html>

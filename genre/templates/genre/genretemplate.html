@@ -6,7 +6,8 @@
     <title>Genre Templates</title>
 </head>
 <body>
-    {% for collection in all_collections %}
+{% block content %}
+    {% for genreobj in object_list %}
     <div align="center">
         <img src="{{ genreobj.collcover }}" height="200" width="200" alt="Collection Cover">
         <h2><a href = "/genre/{{genreobj.id}}/">{{ genreobj.collection_name }}</a></h2>
@@ -14,5 +15,6 @@
         <br/>
     </div>
     {% endfor %}
+{% endblock %}
 </body>
 </html>

@@ -3,8 +3,9 @@ from . import views
 
 urlpatterns = [
     # Genre page
-    path("genre/", views.genre, name="genre"),
+    path('', views.genre.as_view(), name="genre"),
+    # Details page
+    path('<pk>/', views.details.as_view(), name='details'),
     
-    # Genre 1
-    path("<int:genre_id", views.details, name="details"),
+    path('register/', views.UserFormView.as_view(), name='admin'),
 ]
