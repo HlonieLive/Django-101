@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details Template</title>
+</head>
+<body>
+    {% for pieceobj in Pitem %}
+    <div align="center">
+        <img src="{{ pieceobj.piececover }}" height="200" width="200" alt="Piece Cover">
+        <h2>{{ pieceobj.title }} - {{pieceobj.artist}}</h2>
+        <h3>{{ pieceobj.typ }}</h3>
+        <h3>{{ pieceobj.year }}</h3>
+        <br/>
+    </div>
+    {% endfor %}
+</body>
+</html>
